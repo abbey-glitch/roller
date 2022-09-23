@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3>rotating pics</h3>
+        <div id="slider">
+            <div class="sliderContent">
+                <figure class="shadow"><img src="image/I weak ooh.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/earth bender.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/sebuk.jpg" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/kaled.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/still covid19.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/insult on a steerer.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/allegations.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/happy kid.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/let me offer you a coin.webp" alt="" width="100"></figure>
+                <figure class="shadow"><img src="image/like seriously.webp" alt="" width="100"></figure>
+            </div>
+
+        </div>
+    </section>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: grey;
+             /* position: relative;  */
+            /* perspective: 1000px; */
+        }
+        #slider{
+            top: 2em;
+            /* background-color: blue; */
+            width: 60vw;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            perspective: 1500px;
+            position: relative; 
+        }
+        .sliderContent{
+            /* background-color: red; */
+            position: relative; 
+            transform-style: preserve-3d;
+            animation: rotate 15s infinite linear;
+        }
+        .sliderContent:hover{
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        .sliderContent figure{
+             position: absolute; 
+             width: 60vw;
+        }
+        .sliderContent figure:first-child{
+            transform: rotateY(40deg) translateZ(200px);
+        }
+        .sliderContent figure:nth-child(2){
+            transform:rotateY(80deg) translateZ(200px);
+        }
+        .sliderContent figure:nth-child(3){
+            transform:rotateY(120deg) translateZ(200px);
+        }
+        .sliderContent figure:nth-child(4){
+            transform:rotateY(160deg) translateZ(100px);
+        }
+        .sliderContent figure:nth-child(5){
+            transform:rotateY(200deg) translateZ(100px);
+        }
+        .sliderContent figure:nth-child(6){
+            transform: rotateY(240deg) translateZ(100px);
+        }
+        .sliderContent figure:nth-child(7){
+            transform: rotateY(280deg) translateZ(100px);
+        }
+        .sliderContent figure:nth-child(8){
+            transform: rotateY(320deg) translateZ(100px);
+        }
+        .sliderContent figure:nth-child(9){
+            transform: rotateY(360deg) translateZ(100px);
+        }
+        /* .sliderContent figure:nth-child(10){ */
+            /* transform: rotateY(400deg) translateZ(100px); */
+        /* } */
+
+        .sliderContent img{
+            transition: all 300ms;
+            image-rendering: auto;
+            
+        }
+        .sliderContent img:hover{
+            transition: all 300ms;
+            transform: scale(1.2);
+        }
+        @keyframes rotate {
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        .shadow{
+            /* position: absolute; */
+            box-shadow: .01em .01em green;
+        }
+    </style>
+</body>
+</html>
